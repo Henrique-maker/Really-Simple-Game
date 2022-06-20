@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    background-color: rgb(228, 228, 228);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: rgba(0, 0, 0, 0.774);
+    text-align: center;
+    margin-top: 40px; 
+    font-size: 10em;
+}
+
+#game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid rgb(61, 61, 61);
+    margin: 10% auto;
+    
+    
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: rgb(12, 181, 223);
+    position: relative;
+    top: 150px;
+}
+.animate {
+    animation: jump 500ms;
+}
+@keyframes jump {
+    0%{top: 150px;}
+    30%{top: 100px}
+    70%{top: 100px}
+    100%{top:150px;}
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(224, 90, 0);
+    position: relative;
+    top: 130px;
+    left: 480px;
+}
+
+.startGame {
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {left: 480px;}
+    100% {left: -5px;}
+}
+
+.buttons {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    margin: 0px auto;
+    padding: 2px;
+    border: 0;
+    outline: 0;
+    background: rgb(164, 253, 255);
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+.btn span {
+    display: block;
+    border: 0;
+    margin-left: 2px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    transition: background 0.5s;
+    transition: margin-left 0.5s;
+} 
+
+.play {
+    font-weight: 800;
+    width: 80px;
+    height: 40px;
+    position: relative;
+    margin: 0px auto;
+    padding: 2px;
+    border: 0;
+    outline: 0;
+    background: rgb(164, 253, 255);
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.active {
+    background: #5972ffd0;
+    filter: invert(1);
+    color: #fff;
+}
+.active span {
+    background: rgb(177, 177, 177);
+    margin-left: 40px;
+}
+
+/* ******************** dark mode ******************** */
+
+.dark-mode {
+    filter: invert(1);
+}
+
+.dark-mode h1 {
+    color: rgb(0, 0, 0);
+}
